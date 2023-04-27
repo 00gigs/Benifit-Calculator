@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABcalc</title>
+</head>
+<body>
+<!--First-->
+<div class="section1">
+<label for=""></label>Life & Waiver
+    <input type="radio" name="LW" id="LW">
+<select name="LW" id="LW" required>
+    <option value="0" disabled> “Enrolled Plan”</option>
+    <option value="1"> Flat $30K</option>
+    <option value="2"> 1 times salary to 100k</option>
+</select>
+<!--if then show^^^^-->
+<strong hidden>annual pay out 30K</strong><!--flat 30k-->
+<p hidden>Enter Salary (1 times salary to $100k)</p>
+    <input hidden id="LW" type="number">
+<input type="text" disabled hidden placeholder="#annual payout">
+</div>
+<!--Second-->
+<div class="section2">
+    <label for=""></label>STD
+    <input type="radio" name="ST" id="ST" value="STD">
+
+    <select name="ST" id="ST" required>
+        <option value=""disabled>“Enrolled Plan"</option>
+        <option value="" >60% to $1k</option>
+    </select>
+    <!--if then show^^^^vvvv-->
+    <input type="number" placeholder="Salary" hidden>
+
+    <p hidden> “Do you receive workers comp, social security, child support, or any other source of income?”</p>
+    <p hidden>Yes</p><input type="radio" name="YN" id="YN" hidden>
+    <p hidden>No</p><input type="radio" name="YN" id="YN" hidden>
+<!--for YES or no vvv-->
+        <output></output>
+
+    <input type="number" placeholder="Enter Weekly Income Received From All Additional Sources" hidden>
+    
+    <input type="text" value="0" hidden><!--output of the two inputs above(case Basis)-->
+</div>
+<!--Third-->
+<div class="section3">
+<label for=""></label>
+LTD<input type="radio" name="LT" id="LT" value="LTD">
+    <select name="" id="">
+        <option value="">“Enrolled Plan"</option>
+        <option value="">60% to $10k</option>
+    </select>
+
+    <input type="number" placeholder="Salary" hidden>
+
+    <p hidden> “Do you receive workers comp, social security, child support, or any other source of income?”</p>
+    <p hidden>Yes</p><input type="radio" name="YN" id="YN" hidden>
+    <p hidden>No</p><input type="radio" name="YN" id="YN" hidden>
+
+    <!--for YES or no vvv-->
+    <output></output>
+    <input type="number" placeholder="Enter Weekly Income Received From All Additional Sources" hidden>
+    <input type="text" value="0" hidden><!--output of the two inputs above(case basis)-->
+</div>
+</body>
+</html>
