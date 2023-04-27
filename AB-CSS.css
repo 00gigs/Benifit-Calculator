@@ -1,5 +1,7 @@
 .wrapper{
 background-color:hsla(194, 80%, 37%, 0.692);
+clear: both;
+
 }
 
 #title{
@@ -8,11 +10,24 @@ background-color:hsla(194, 80%, 37%, 0.692);
 }
 
 #sub-h{
-    color: rgb(25, 23, 218);
+    color: hsla(194, 80%, 37%, 0.692);
     background-color: antiquewhite;
-     
+    line-height: 20px;
+    width: 5%;
+     margin-right: .8%;
 }
 
 .form{
     background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+   padding: .9%;
+   margin: .4%;
+
+    
+    
+}
+
+label{
+    margin-right: .8%;
 }
