@@ -1,0 +1,18 @@
+.wrapper{
+background-color:hsla(194, 80%, 37%, 0.692);
+}
+
+#title{
+    color: antiquewhite;
+    
+}
+
+#sub-h{
+    color: rgb(25, 23, 218);
+    background-color: antiquewhite;
+     
+}
+
+.form{
+    background-color: antiquewhite;
+}
