@@ -13,73 +13,70 @@
         
 <!--First-->
 <div class="form">
-    <h2 id="sub-h"> Choose a Benifit-> </h2>
-
-<label for="rad-but">
-<input type="radio" name="LW" id="rad-but">Life and Waiver  
+    <h2 id="sub-h"> Choose a Benifit- </h2>
+<label for="LWbtn">
+<input type="radio" name="btn" id="LWbtn" onclick="LWbtn()" class="radbut" value="0" >Life and Waiver  
 </label>
 <!--if then show^^^^ using enrolled plan selector-->
-<strong hidden>annual pay out 30K</strong><!--flat 30k-->
-<p hidden>Enter Salary (1 times salary to $100k)</p>
-    <input hidden id="LW" type="number">
-<input type="text" disabled hidden placeholder="#annual payout">
-
+    <div id="hidden">
+        <div class="inp">
+<strong>annual pay out 30K</strong><!--flat 30k-->
+<p>Enter Salary (1 times salary to $100k)</p>
+    <input id="LW" type="number">
+<input type="text" disabled  placeholder="#annual payout">
+    </div>
+</div>
 <!--Second-->
-<label for="rad-but">
-<input type="radio" name="ST" id="rad-but" value="STD">STD</label>
+<label for="STbtn">
+<input type="radio" name="btn" id="STbtn" value="STD" onclick="STbtn()" class="radbut" value="1">STD</label>
+<div id="hidden2">
+    <div class="inp1">
     <!--if then show^^^^vvvv using enrolled plan selector-->
-    <input type="number" placeholder="Salary" hidden>
-    <p hidden> “Do you receive workers comp, social security, child support, or any other source of income?”</p>
-    <p hidden>Yes</p><input type="radio" name="YN" id="YN" hidden>
-    <p hidden>No</p><input type="radio" name="YN" id="YN" hidden>
+    <input type="number" placeholder="Salary" >
+    <p> “Do you receive workers comp, social security, child support, or any other source of income?”</p>
+    <p>Yes</p><input type="radio" name="YN" id="YN" >
+    <p>No</p><input type="radio" name="YN" id="YN" >
 <!--for YES or no vvv-->
         <output></output>
-
-    <input type="number" placeholder="Enter Weekly Income Received From All Additional Sources" hidden>
-    
-    <input type="text" value="0" hidden><!--output of the two inputs above(case Basis)-->
+    <input type="number" placeholder="Enter Weekly Income Received From All Additional Sources" >
+    <input type="text" value="0" ><!--output of the two inputs above(case Basis)-->
+</div>
+</div>
 
 <!--Third-->
-
-<label for="rad-but">
-<input type="radio" name="LT" id="rad-but" value="LTD">LTD</label>
+<label for="LTbtn">
+<input type="radio" name="btn" id="LTbtn" value="LTD" class="radbut" onclick="LTbtn()" value="2">LTD</label>
 
     <!--if then show^^^^vvvv using enrolled plan selector-->
+        <div id="hidden3">
+            <div class="inp2">
+    <input type="number" placeholder="Salary" >
 
-    <input type="number" placeholder="Salary" hidden>
-
-    <p hidden> “Do you receive workers comp, social security, child support, or any other source of income?”</p>
-    <p hidden>Yes</p><input type="radio" name="YN" id="YN" hidden>
-    <p hidden>No</p><input type="radio" name="YN" id="YN" hidden>
+    <p> “Do you receive workers comp, social security, child support, or any other source of income?”</p>
+    <p>Yes</p><input type="radio" name="YN" id="YN" >
+    <p>No</p><input type="radio" name="YN" id="YN" >
 
     <!--for YES or no vvv-->
     <output></output>
-    <input type="number" placeholder="Enter Weekly Income Received From All Additional Sources" hidden>
-    <input type="text" value="0" hidden><!--output of the two inputs above(case basis)-->
+    <input type="number" placeholder="Enter Weekly Income Received From All Additional Sources" >
+    <input type="text" value="0" ><!--output of the two inputs above(case basis)-->
+</div>
+</div>
 
 
 
 
 
-
-<!--enrolled plan selectors(some are hidden reveal via case basis of benifit selected)-->
+<!--enrolled plan selectors(some are Hidden reveal via case basis of benifit selected)-->
  <p>Enrolled Plan:<p>
-<select name="LW" id="LW" required hidden>
+<select name="selector" id="selector" required>
     <option value="0" disabled>Select an Option</option>
-    <option value="1"> Flat $30K</option>
-    <option value="2"> 1 times salary to 100k</option>
+    <option value="1" hidden> Flat $30K</option>
+    <option value="2" hidden>1 times salary to 100k</option>
+    <option value="3" hidden>60% to $1k</option>
+    <option value="4" hidden>60% to $10k</option>
 </select>
 
-
-<select name="ST" id="ST" required hidden>
-    <option value=""disabled>Select an Option</option>
-    <option value="" >60% to $1k</option>
-</select>
-
-<select name="LT" id="LT">
-    <option value="0">Select an Option</option>
-    <option value="1">60% to $10k</option>
-</select>
 
 
 <input type="submit" value="submit" onclick="">
@@ -89,11 +86,40 @@
 
 
 <script>
-   var  = document.getElementById().value;
-   var  = document.getElementById().value;
-   var  = document.getElementById().value;
-   var  = document.getElementById().value;
-   var  = document.getElementById().value;
+/*reveals options depending on radio button selection*/
+   function LWbtn(){
+    var LWbtn = document.getElementById("hidden");
+        if(LWbtn.style.display === "none"){
+            LWbtn.style.display = "block";
+        }
+        else{
+            LWbtn.style.display = "none";
+        }
+   }
+
+   function STbtn(){
+    var STbtn = document.getElementById("hidden2");
+        if(STbtn.style.display === "none"){
+            STbtn.style.display = "block";
+        }
+        else{
+            STbtn.style.display = "none";
+        }
+   }
+
+   function LTbtn(){
+    var LTbtn = document.getElementById("hidden3");
+        if(LTbtn.style.display === "none"){
+            LTbtn.style.display = "block";
+        }
+        else{
+            LTbtn.style.display = "none";
+        }
+   }
+
+   
+   
+
 
 </script>
 
